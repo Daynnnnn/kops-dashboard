@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::post('/kops/create', 'KopsCommands@create');
+Route::post('/kops/delete', 'KopsCommands@delete');
