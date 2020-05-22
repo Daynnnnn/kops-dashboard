@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/kops/create', 'KopsCommands@create');
-Route::post('/kops/delete', 'KopsCommands@delete');
+Route::post('/api/kops/create', 'KopsCommands@create');
+Route::post('/api/kops/delete', 'KopsCommands@delete');
 
-Route::post('/iam/create', 'IAM@create');
-Route::post('/iam/delete', 'IAM@delete');
+Route::post('/api/iam/create', 'IAM@create');
+Route::post('/api/iam/delete', 'IAM@delete');
 
-Route::post('/iam/get', 'IAM@get');
+Route::post('/api/iam/get', 'IAM@get');
