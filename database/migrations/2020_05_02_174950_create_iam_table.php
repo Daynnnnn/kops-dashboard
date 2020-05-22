@@ -16,7 +16,8 @@ class CreateIamTable extends Migration
         Schema::create('iam', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->string('encrypted_iam');
+            $table->string('encrypted_iam_key');
+            $table->string('encrypted_iam_secret');
             $table->timestamps();
         });
     }
