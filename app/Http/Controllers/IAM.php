@@ -34,8 +34,8 @@ class IAM extends Controller
 
 		// [KD-TMP] needs some sort of auth
 
-		$EncryptedIAMKey = $this->Encryption($request->input('IAM_KEY'), $request->input('IAM_PASSWORD'), 'e');
-		$EncryptedIAMSecret = $this->Encryption(base64_encode($request->input('IAM_SECRET')), $request->input('IAM_PASSWORD'), 'e');
+		$EncryptedIAMKey = $this->Encrypt($request->input('IAM_KEY'), $request->input('IAM_PASSWORD'), 'e');
+		$EncryptedIAMSecret = $this->Encrypt($request->input('IAM_SECRET'), $request->input('IAM_PASSWORD'), 'e');
 
 		DB::table('iam')->insertOrIgnore([
 		    'name' => $request->input('IAM_NAME'),
